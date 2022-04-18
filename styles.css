@@ -116,7 +116,7 @@ body {
 	text-align: center;
 	margin: auto;
 	border: none;
-	padding-top: 0px;
+	padding-top: 5px;
 }
 
 .sidenav a {
@@ -137,13 +137,10 @@ body {
 	font-weight: bold;
 }
 
-.menu_icon:before {
-	content: "\2261";
-	font-size: 40px;
-	text-rendering: auto;
+svg {
 	vertical-align: middle;
-	font-weight: normal;
-	font-style: normal;
+	fill: white;
+	padding-bottom: 3px;
 }
 
 /* Page content */
