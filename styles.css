@@ -140,7 +140,7 @@ body {
 
 .menu_icon:before {
 	content: "\2261";
-	font-size: 30px;
+	font-size: 40px;
 	text-rendering: auto;
 	vertical-align: middle;
 	font-weight: normal;
