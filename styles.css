@@ -255,7 +255,7 @@ iframe {
 	clear: both;
 	height: 100px;
 	position: relative;
-	top: 150px;
+	top: 160px;
 	z-index: -1;
 }
 
@@ -317,7 +317,7 @@ footer a:hover {
 	iframe {width: 100%; height: 400px; position: relative; top: 20px;}
 	.desc {display: block;}
 	.separator {top: 80px;}
-	footer {position: relative; top: 100px; bottom: 0px; padding-left: 0px; padding-right: 0px;}
+	footer {position: relative; top: 120px; bottom: 0px; padding-left: 0px; padding-right: 0px;}
 }
 
 /* Mobile layout, portrait thin */
@@ -330,4 +330,9 @@ footer a:hover {
 	.source {top: 50px;}
 	.tile {top: 25px;}
 	.separator {top: 160px;}
+}
+
+/* dark mode */
+@media screen and (prefers-color-scheme: dark) {
+	body {background-color: black; color: lightgrey;}
 }
