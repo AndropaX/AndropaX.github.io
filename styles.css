@@ -20,6 +20,6 @@ html, body {
 }
 
 .leaflet-control-locate-location-arrow {
-	-webkit-mask-image: url('location-crosshairs.svg');
-    mask-image: url('location-crosshairs.svg');
+	-webkit-mask-image: url('location-crosshairs.svg') !important;
+    mask-image: url('location-crosshairs.svg') !important;
 }
