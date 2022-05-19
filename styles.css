@@ -17,4 +17,9 @@ html, body {
 
 .target {
 	font-size: 1.5em;
-} 
+}
+
+.leaflet-control-locate-location-arrow {
+	-webkit-mask-image: url('location-crosshairs.svg');
+    mask-image: url('location-crosshairs.svg');
+}
