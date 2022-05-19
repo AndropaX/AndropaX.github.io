@@ -5,12 +5,14 @@
 	<link rel="icon" type="image/png" href="UWr-logo.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
-	<meta name="theme-color" content="#cdebb2">
+	<meta name="theme-color" content="#abcbb0">
 	<link rel="stylesheet" href="leaflet.css"/>
 	<link rel="stylesheet" href="L.Control.Locate.min.css"/>
+	<link rel='stylesheet' href='leaflet.fullscreen.css'/>
 	<link rel="stylesheet" href="styles.css"/>
 	<script src="leaflet.js"></script>
 	<script src="L.Control.Locate.js" ></script>
+	<script src='Leaflet.fullscreen.min.js'></script>
 </head>
 <body>
 	<div id="map"></div>
@@ -22,6 +24,7 @@
 		}).addTo(map);
 
 		L.control.locate().addTo(map);
+		map.addControl(new L.Control.Fullscreen());
 	</script>
 </body>
 </html>

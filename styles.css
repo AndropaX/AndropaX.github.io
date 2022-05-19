@@ -23,3 +23,7 @@ html, body {
 	-webkit-mask-image: url('location-crosshairs.svg') !important;
     mask-image: url('location-crosshairs.svg') !important;
 }
+
+.leaflet-control-locate.following a .leaflet-control-locate-location-arrow{
+	background-color:#abcbb0;
+}
