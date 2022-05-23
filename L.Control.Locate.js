@@ -316,7 +316,7 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
                 title: "Show me where I am",
                 metersUnit: "meters",
                 feetUnit: "feet",
-                popup: "You are within {distance} {unit} from this point",
+                popup: "You are within {distance} {unit} from this point {user_lat} {user_lon}",
                 outsideMapBoundsMsg: "You seem located outside the boundaries of the map"
             },
             /** The default options passed to leaflets locate method. */
@@ -629,6 +629,10 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
 
             let distance;
             let unit;
+			let user_lat;
+			let user_lon;
+			user_lat = this._event.latlng.lat;
+			user_lon = this._event.latlng.lng;
             if (this.options.metric) {
                 distance = radius.toFixed(0);
                 unit =  this.options.strings.metersUnit;
@@ -656,9 +660,9 @@ You can find the project at: https://github.com/domoritz/leaflet-locatecontrol
             const t = this.options.strings.popup;
             function getPopupText() {
                 if (typeof t === 'string') {
-                    return L.Util.template(t, {distance, unit});
+                    return L.Util.template(t, {distance, unit, user_lat, user_lon});
                 } else if (typeof t === 'function') {
-                    return t({distance, unit});
+                    return t({distance, unit, user_lat, user_lon});
                 } else {
                     return t;
                 }

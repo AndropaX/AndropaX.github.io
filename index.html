@@ -1,11 +1,10 @@
 <!doctype HTML>
-<html lang=""pl">
+<html lang="pl">
 <head>
 	<title>UWR - mapa</title>
 	<link rel="icon" type="image/png" href="UWr-logo.png"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
-	<meta name="theme-color" content="#fd643b">
 	<link rel="stylesheet" href="leaflet.css"/>
 	<link rel="stylesheet" href="L.Control.Locate.min.css"/>
 	<link rel='stylesheet' href='leaflet.fullscreen.css'/>
@@ -23,13 +22,11 @@
 		attribution: 'Maksymilian Maroszek &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 		}).addTo(map);
 
-		let latit = 0;
-
 		L.control.locate({
 		strings: {
 			title: "Pokaż moją lokalizację",
 			metersUnit: "metrów",
-			popup: "Znajdujesz się {distance} {unit} od tego punktu",
+			popup: "Znajdujesz się {distance} {unit} od tego punktu<br>Twoje współrzędne to: {user_lat}, {user_lon}",
 			outsideMapBoundsMsg: "Znajdujesz się poza granicami mapy"
 		}
 		}).addTo(map);
