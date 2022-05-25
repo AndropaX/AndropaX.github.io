@@ -23,3 +23,19 @@ html, body {
 	-webkit-mask-image: url('location-crosshairs.svg') !important;
     mask-image: url('location-crosshairs.svg') !important;
 }
+
+.navbutton {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 300px;
+	background-color: #fc8428;
+	text-align: center;
+	font-size: 20px;
+	text-decoration: none;
+	color: white !important;
+}
+
+.navbutton:hover {
+	color: grey !important;
+}

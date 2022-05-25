@@ -20,6 +20,7 @@
 		
 		var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: 'Maksymilian Maroszek &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+		minZoom: 10
 		}).addTo(map);
 
 		L.control.locate({
@@ -37,6 +38,25 @@
 			'true': 'Opuść tryb pełnego ekranu'
 		}
 		}));
+		
+		var uwr_1 = L.marker([51.1139734, 17.0340136]).bindPopup('<h3>Gmach Główny UWr<br>Instytut Geografii i Rozwoju Regionalnego</h3><h4>Pl. Uniwersytecki 1</h4><img src="pl_uni1.jpg" width="300px" >Lista sal:<ul><li>II piętro: 223</li><li>III piętro: 309,311,315,320,325,328,332,336</li></ul><a class="navbutton" href="https://www.google.com/maps/dir//51.1139734,17.0340136">Nawiguj</a></p></div>'),
+		    uwr_2 = L.marker([51.1119840, 17.0337709]).bindPopup('ul. Kuźnicza 49/55'),
+			uwr_3 = L.marker([51.1161755, 17.0294180]).bindPopup('ul. Cybulskiego 32/34'),
+			uwr_4 = L.marker([51.1052779, 17.0893290]).bindPopup('ul. Kosiby 6/8');
+			
+		var fav_1 = L.marker([51.2, 17.1]).bindPopup('interesujące miejsce 1'),
+			fav_2 = L.marker([51.3, 17.2]).bindPopup('interesujące miejsce 2');
+		
+		var uwr_bud = L.layerGroup([uwr_1,uwr_2,uwr_3,uwr_4]);
+		var fav_places = L.layerGroup([fav_1,fav_2]);
+			
+		var warstwy = {
+			"Budynki, w których prowadzone są zajęcia": uwr_bud,
+			"Ciekawe miejsca": fav_places
+		};
+		
+		L.control.scale({position: 'bottomright'}).addTo(map);
+		L.control.layers(null,warstwy).addTo(map);
 	</script>
 </body>
 </html>
