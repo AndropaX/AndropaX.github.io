@@ -37,5 +37,15 @@ html, body {
 }
 
 .navbutton:hover {
-	color: grey !important;
+	background-color: #ff9438;
+}
+
+.s_list {
+	padding-left: 20px;
+	padding-bottom: 5px;
+	margin: 0px;
+}
+
+.locate_text {
+	text-align: center;
 }
